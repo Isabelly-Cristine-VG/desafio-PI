@@ -30,8 +30,8 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
+create table estufa (
+/* em nossa regra de negócio, um estufa tem apenas um sensor */
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	descricao VARCHAR(300),
 	fk_empresa INT,
@@ -45,23 +45,23 @@ create table medida (
 	dht11_umidade DECIMAL,
 	luminosidade DECIMAL,
 	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+	fk_estufa INT,
+	FOREIGN KEY (fk_estufa) REFERENCES estufa(id)
 );
 
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Estufa A', 1);
-insert into aquario (descricao, fk_empresa) values ('Estufa B', 1);
-insert into aquario (descricao, fk_empresa) values ('Estufa C', 1);
+insert into estufa (descricao, fk_empresa) values ('Estufa A', 1);
+insert into estufa (descricao, fk_empresa) values ('Estufa B', 1);
+insert into estufa (descricao, fk_empresa) values ('Estufa C', 1);
 
-insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
+insert into medida(dht11_umidade,luminosidade,momento,fk_estufa)values
 (60.2,22.2,'2025-06-17 13:12:00',1),
 (62.8,22.2,'2025-06-17 13:12:05',1),
 (61.1,22.2,'2025-06-17 13:12:10',1),
 (66.7,22.2,'2025-06-17 13:12:15',1),
 (68.2,22.2,'2025-06-17 13:12:20',1);
 
-insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
+insert into medida(dht11_umidade,luminosidade,momento,fk_estufa)values
 (61.1,22.4,'2025-06-17 13:12:00',2),
 (62.4,23.6,'2025-06-17 13:12:05',2),
 (61.3,22.1,'2025-06-17 13:12:10',2),
