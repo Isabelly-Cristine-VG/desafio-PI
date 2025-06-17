@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container img {
+    padding-bottom: 15px;
+}
+
+.todos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.imagemBotao {
+    width: 10%;
+    transition: transform 0.7s ease;
+}
+
+.imagemBotao:hover {
+    transform: rotate(360deg);
+}
+
+.camposInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#idPokemon{
+    height: 25px;
+    width: 190px;
+}
+
+.shinys{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+
+.pokemonEscolhido {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(246, 211, 11);
+    border-width: 1rem;
+    padding: 20px;
+    color: rgb(43, 43, 43);
+    transition: transform 0.5s ease;
+    width: 20rem;
+}
+
+.pokemonEscolhido:hover{
+    transform: scale(1.1);
+}
+
+
+.pokemonEscolhido img {
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+.nomePokemon{
+    background-color: rgb(196, 196, 196);
+}
+
+.textinho{
+    border-radius: 10px;
+    padding: 15px;
+}

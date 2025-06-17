@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="https://user-images.githubusercontent.com/29473781/180619084-a56960ab-7efa-4e34-9d33-4e3e581d62ff.png" alt="">
+        <div class="camposInput">
+            <input type="text" id="idPokemon" placeholder="pesquise pelo numero ou nome">
+            <div class="shinys">
+            <input type="checkbox" name="Versão shiny" id="idShiny">Shiny✨
+            </div>
+
+
+        </div>
+        <img src="assets/1.png" alt="" class="imagemBotao" onclick="buscarAPI()">
+        <div id="resposta" class="todos"></div>
+    </div>
+
+</body>
+<script>
+    async function buscarAPI() {
+        let pokemon = idPokemon.value;
+        let shiny = idShiny.checked;
+
+        let retorno = await fetch(` https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
+            .then((resposta) => resposta.json())
+        let imagem = retorno.sprites.versions['generation-v']['black-white'].animated.front_default
+        let nome = retorno.name;
+        let tipo = retorno.types;
+        let tipoOficial = [];
+        let mensagem = '';
+
+        console.log("Resposta final: ", tipo);
+        for (let i = 0; i < tipo.length; i++) {
+            tipoOficial.push(tipo[i].type.name);
+        }
+        console.log(corTipo(tipoOficial));
+        
+        if (shiny) {
+            let imagemShiny = retorno.sprites.versions['generation-v']['black-white'].animated.front_shiny;
+            mensagem = `
+        <div class="pokemonEscolhido" style="background-color: ${corTipo(tipoOficial)[0]};">
+            <div class="nomePokemon">
+                <h3>${nome} </h3>
+            </div>
+            <img src="${imagemShiny}" alt="">
+            <div class="textinho" style="background-color: ${corTipo(tipoOficial)[1]};">
+                <h3>Tipo:${tipoOficial}</h3>
+            </div>
+        </div>
+    `;
+        } else {
+            mensagem = `
+        <div class="pokemonEscolhido" style="background-color: ${corTipo(tipoOficial)[0]};">
+            <div class="nomePokemon">
+                <h3>${nome} </h3>
+            </div>
+            <img src="${imagem}" alt="">
+            <div class="textinho " style="background-color: ${corTipo(tipoOficial)[1]};">
+                
+                <h3>Tipo:${tipoOficial}</h3>
+            </div>
+        </div>
+    `;
+        }
+
+
+        resposta.innerHTML += mensagem;
+    }
+</script>
+<script src="script.js"></script>
+
+</html>
