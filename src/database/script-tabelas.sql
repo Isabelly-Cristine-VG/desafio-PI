@@ -49,6 +49,11 @@ create table medida (
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
 
+insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
+insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
+insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
+insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+
 insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
 (60.2,22.2,'2025-06-17 13:12:00',1),
 (62.8,22.2,'2025-06-17 13:12:05',1),
@@ -61,9 +66,3 @@ insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
 (61.3,22.1,'2025-06-17 13:12:10',2),
 (65.2,21.9,'2025-06-17 13:12:15',2),
 (68.7,22.2,'2025-06-17 13:12:20',2);
-
-
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
