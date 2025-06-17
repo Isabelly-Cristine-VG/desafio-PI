@@ -20,7 +20,7 @@
         rel="stylesheet">
 </head>
 
-<body onload=" exibirAquarios(),  atualizacaoPeriodica()">
+<body onload=" exibirEstufa(),  atualizacaoPeriodica()">
 
     <div class="janela">
 
@@ -124,9 +124,9 @@
 
 <script>
 
-    function exibirAquarios() {
+    function exibirEstufa() {
         fetch('')
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
+        JSON.parse(sessionStorage.ESTUFA).forEach(item => {
             document.getElementById("cardEstufa").innerHTML += `
                     <div class="card-estufa">
                         <div class="title-estufa">
