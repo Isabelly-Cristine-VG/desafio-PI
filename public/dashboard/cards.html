@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="stylesheet" href="./../css/estilo.css" />
+    
 
     <script src="../js/sessao.js"></script>
     <script src="../js/alerta.js"></script>
@@ -20,20 +20,20 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), exibirAquarios(),  atualizacaoPeriodica()">
+<body onload=" exibirEstufa(),  atualizacaoPeriodica()">
 
     <div class="janela">
 
         <div class="header-left dash-header">
 
-            <h1>AquaTech</h1>
+            <h1>TechEstufa</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
             <div class="btn-nav">
-                <h3>Aquários</h3>
+                <h3>Estufas</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -59,33 +59,60 @@
             </div>
             <div class="area-parametros-alerta">
                 <p class="titulo-legenda">
-                    Legenda - Parâmetros para Alertas
+                    Legenda - Parâmetros para Alertas Umidade
                 </p>
                 <div class="parametros-alerta">
                     <div class="item-regua perigo-frio">
                         <p>Perigo</p>
-                        <p>&lt;=5°C</p>
+                        <p>&lt;=30%</p>
                     </div>
                     <div class="item-regua alerta-frio">
                         <p>Alerta</p>
-                        <p>&lt;=10°C</p>
+                        <p>&lt;=55%</p>
                     </div>
                     <div class="item-regua ideal">
                         <p>Ideal</p>
-                        <p>20°C</p>
+                        <p>60%</p>
                     </div>
                     <div class="item-regua alerta-quente">
                         <p>Alerta</p>
-                        <p>&gt;=22°C</p>
+                        <p>&gt;=75%C</p>
                     </div>
                     <div class="item-regua perigo-quente">
                         <p>Perigo</p>
-                        <p>&gt;=23°C</p>
+                        <p>&gt;=85%C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="area-parametros-alerta">
+                <p class="titulo-legenda">
+                    Legenda - Parâmetros para Alertas Luminosidade
+                </p>
+                <div class="parametros-alerta">
+                    <div class="item-regua perigo-frio">
+                        <p>Perigo</p>
+                        <p>&lt;=350nm</p>
+                    </div>
+                    <div class="item-regua alerta-frio">
+                        <p>Alerta</p>
+                        <p>&lt;=550nm</p>
+                    </div>
+                    <div class="item-regua ideal">
+                        <p>Ideal</p>
+                        <p>500nm</p>
+                    </div>
+                    <div class="item-regua alerta-quente">
+                        <p>Alerta</p>
+                        <p>&gt;=550nm</p>
+                    </div>
+                    <div class="item-regua perigo-quente">
+                        <p>Perigo</p>
+                        <p>&gt;=650nm</p>
                     </div>
                 </div>
             </div>
 
-            <div class="cards" id="cardAquarios">
+            <div class="cards" id="cardEstufa">
 
             </div>
 
@@ -97,22 +124,26 @@
 
 <script>
 
-    function exibirAquarios() {
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-            document.getElementById("cardAquarios").innerHTML += `
-                    <div class="card-aquario">
-                        <div class="title-aquario">
+    function exibirEstufa() {
+        fetch('')
+        JSON.parse(sessionStorage.ESTUFA).forEach(item => {
+            document.getElementById("cardEstufa").innerHTML += `
+                    <div class="card-estufa">
+                        <div class="title-estufa">
                             <h1>${item.descricao}</h1>
                         </div>
-                        <div class="desc-aquario">
+                        <div class="desc-estufa">
                         <div class="temperatura">
-                            <p id="temp_aquario_${item.id}">-°C</p>
+                            <p id="temp_estufa_${item.id}">-°C</p>
                         </div>
                         <div class="cor-alerta" id="card_${item.id}"></div>
                     </div>
                     </div>
                     `
         });
+
+        let nomeUsuario = sessionStorage.NOME_USUARIO
+        b_usuario.innerHTML = nomeUsuario
     }
 
 </script>

@@ -2,10 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Righteous", sans-serif;
 }
 
 .label-captura {
@@ -44,7 +46,7 @@ body {
 
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
+  border: 3px solid #F2A7D0;
   background-color: white;
   border-radius: 5px;
 }
@@ -58,7 +60,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #F2A7D0;
   width: 120px;
 }
 
@@ -71,7 +73,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #F26B9C;
   width: 80px;
 }
 
@@ -82,8 +84,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #F26B9C;
   padding: 20px;
+  color: #F26B9C;
 }
 
 .publicacao>*:not(:last-child) {
@@ -95,7 +98,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: #F2F2F2;
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -112,7 +115,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #F2F2F2;
 }
 
 .dash {
@@ -120,7 +123,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: #F2F2F2;
   height: 100vh;
   overflow: auto;
 }
@@ -132,7 +135,7 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: #F26B9C;
 }
 
 .area-parametros-alerta .titulo-legenda {
@@ -167,23 +170,23 @@ body {
 }
 
 .perigo-frio {
-  background-color: #5c6bc0;
+  background-color: #afbbf3;
 }
 
 .perigo-quente {
-  background-color: #ff7043;
+  background-color: #f79f84;
 }
 
 .alerta-frio {
-  background-color: #42a5f5;
+  background-color: #94c8f3;
 }
 
 .alerta-quente {
-  background-color: #ffee58;
+  background-color: #f5eb99;
 }
 
 .ideal {
-  background-color: #9ccc65;
+  background-color: #cbeca5;
 }
 
 .cards {
@@ -196,7 +199,7 @@ body {
   color: white;
 }
 
-.card-aquario {
+.card-estufa {
   margin: 2%;
   min-width: 40%;
   max-width: 50%;
@@ -206,40 +209,41 @@ body {
   /* text-align: center; */
   height: 180px;
   /* justify-content: right; */
-  background-color: #212124;
+  background-color: #F2F2F2;
   font-size: 20px;
+  color: #F26B9C;
 }
 
-.card-aquario h1 {
+.card-estufa h1 {
   width: fit-content;
 }
 
-.card-aquario p {
+.card-estufa p {
   margin: 0;
   font-size: 50px;
   font-weight: lighter;
   text-align: left;
 }
 
-.desc-aquario {
+.desc-estufa {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
 }
 
-.desc-aquario .cor-alerta {
+.desc-estufa .cor-alerta {
   width: 30px;
 }
 
-.title-aquario {
+.title-estufa {
   width: 100%;
 }
 
 
 .cards h1 {
   font-size: 22px;
-  border-bottom: solid white 1px;
+  border-bottom: solid #F26B9C 1px;
   text-align: left;
   font-weight: lighter;
   margin: 20px;
@@ -286,7 +290,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
+  color: #86A656;
   background-color: white;
   margin: 5px;
   border-radius: 3px;
@@ -295,7 +299,7 @@ body {
 
 .btn-pink {
   color: white;
-  background-color: #e6005a;
+  background-color: #86A656;
 }
 
 .btn-white {
@@ -348,15 +352,15 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid #F26B9C;
+  background-color: #F2F2F2;
 }
 
 .dash-right {
   display: flex;
   width: 70%;
   height: fit-content;
-  background-color: #161618;
+  background-color: #F2F2F2;
   position: relative;
   top: 0;
   left: 25%;
@@ -365,7 +369,7 @@ canvas {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: #F26B9C;
 }
 
 .hello {
@@ -375,7 +379,7 @@ canvas {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: #F2A7D0;
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -387,7 +391,7 @@ canvas {
 .btn-nav {
   width: 40%;
   color: white;
-  background-color: #e6005a;
+  background-color: #86A656;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -396,14 +400,14 @@ canvas {
 .btn-nav-white {
   width: 40%;
   background-color: white;
-  border: 3px solid #e6005a;
+  border: 3px solid #86A656;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #86A656;
   padding: 0;
   margin: 0;
 }
@@ -418,11 +422,65 @@ canvas {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
+  background-color: #F26B9C;
   color: white;
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+
+#alerta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.mensagem-alarme {
+  background-color: #F2CEE9;
+  border-radius: 5px;
+  width: 300px;
+  height: 80px;
+  margin: 10px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #F26B9C;
+}
+
+.mensagem-alarme h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.mensagem-alarme .informacao {
+  width: 66%;
+}
+
+.alarme-sino {
+  width: 48px;
+  height: 48px;
+  animation-name: bell;
+  animation-duration: 4s;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
+  background-size: cover;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bell {
+  0%   {transform: rotate(25deg)}
+  25%  {transform: rotate(-25deg)}
+  50%  {transform: rotate(25deg)}
+  75%  {transform: rotate(-25deg)}
+  100% {transform: rotate(25deg)}
+}
+
+.corzinha{
+  color: #F2A7D0;
+}
+
+#form_postagem{
+  color: #F2A7D0;
 }
