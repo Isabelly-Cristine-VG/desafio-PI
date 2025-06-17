@@ -119,3 +119,12 @@ function corTipo(tipoOficial) {
 
     return cores;
 }
+
+async function sortearGato(){
+    let retorno = await fetch(`https://api.thecatapi.com/v1/images/search`)
+            .then((resposta) => resposta.json())
+            
+    let imagem = retorno[0].url
+
+    gato.innerHTML = `<img src="${imagem}" alt="" width="" height="">`
+}
