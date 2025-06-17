@@ -10,7 +10,6 @@
 
     
     <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="stylesheet" href="./../css/estilo.css" />
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -102,7 +101,7 @@
                         <canvas id="myChartCanvas${item.id}"></canvas>
                     </div>
                     <div class="label-captura">
-                        <p id="avisoCaptura${item.id}" style="color: white"></p>
+                        <p id="avisoCaptura${item.id}" style="color: #F26B9C"></p>
                     </div>
                 </div>
             `
@@ -118,7 +117,7 @@
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
         var descricao = JSON.parse(sessionStorage.AQUARIOS).find(item => item.id == idAquario).descricao;
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>" + descricao + "</span>"
+        tituloAquario.innerHTML = "<span style='color: #F2A7D0'>Últimas medidas de Temperatura e Umidade do </span><span style='color: #F26B9C'>" + descricao + "</span>"
     }
 
     function exibirAquario(idAquario) {
@@ -204,17 +203,19 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Umidade',
+                label: 'Luminosidade',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: '#F26B9C',
+                backgroundColor: '#F26B9C',
                 tension: 0.1
             },
             {
                 label: 'Temperatura',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(199, 52, 52)',
+                borderColor: '#f50059',
+                backgroundColor: '#f50059',
                 tension: 0.1
             }]
         };
