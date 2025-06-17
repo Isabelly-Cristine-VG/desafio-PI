@@ -46,7 +46,7 @@ body {
 
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
+  border: 3px solid #F2A7D0;
   background-color: white;
   border-radius: 5px;
 }
@@ -60,7 +60,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #F2A7D0;
   width: 120px;
 }
 
@@ -73,7 +73,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #F26B9C;
   width: 80px;
 }
 
@@ -84,8 +84,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #F26B9C;
   padding: 20px;
+  color: #F26B9C;
 }
 
 .publicacao>*:not(:last-child) {
@@ -474,4 +475,12 @@ canvas {
   50%  {transform: rotate(25deg)}
   75%  {transform: rotate(-25deg)}
   100% {transform: rotate(25deg)}
+}
+
+.corzinha{
+  color: #F2A7D0;
+}
+
+#form_postagem{
+  color: #F2A7D0;
 }
