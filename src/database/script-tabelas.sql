@@ -2,13 +2,9 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 
-/*
-comandos para mysql server
-*/
+CREATE DATABASE estufaTech;
 
-CREATE DATABASE aquatech;
-
-USE aquatech;
+USE estufaTech;
 
 CREATE TABLE empresa (
 	id INT PRIMARY KEY AUTO_INCREMENT,
