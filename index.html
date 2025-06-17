@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
-        <img src="https://user-images.githubusercontent.com/29473781/180619084-a56960ab-7efa-4e34-9d33-4e3e581d62ff.png" alt="">
+        <img src="https://user-images.githubusercontent.com/29473781/180619084-a56960ab-7efa-4e34-9d33-4e3e581d62ff.png"
+            alt="">
         <div class="camposInput">
             <input type="text" id="idPokemon" placeholder="pesquise pelo numero ou nome">
             <div class="shinys">
-            <input type="checkbox" name="Versão shiny" id="idShiny">Shiny✨
+                <input type="checkbox" name="Versão shiny" id="idShiny">Shiny✨
             </div>
 
 
@@ -22,6 +24,39 @@
         <div id="resposta" class="todos"></div>
     </div>
 
+
+    <div class="retanguloSaibaMais">
+        <h1>Top 5 Letras do Alfabeto</h1>
+        <div class="sliderContainer">
+
+            <button id="botaoAnterior" style="color: white;font-size: 8rem;">></button>
+            <div class="container-images">
+
+                <div class="slider on">
+
+                    <h3>1-M</h3>
+                </div>
+                <div class="slider">
+                    <h3>2-Y</h3>
+
+                </div>
+                <div class="slider">
+                    <h3>3-L</h3>
+
+                </div>
+                <div class="slider">
+                    <h3>4-K</h3>
+
+                </div>
+                <div class="slider">
+                    <h3>5-F</h3>
+
+                </div>
+            </div>
+                <button id="botaoProximo" style="color: white;font-size: 8rem;">></button>
+        </div>   
+           
+    </div>
 </body>
 <script>
     async function buscarAPI() {
@@ -41,7 +76,7 @@
             tipoOficial.push(tipo[i].type.name);
         }
         console.log(corTipo(tipoOficial));
-        
+
         if (shiny) {
             let imagemShiny = retorno.sprites.versions['generation-v']['black-white'].animated.front_shiny;
             mensagem = `
