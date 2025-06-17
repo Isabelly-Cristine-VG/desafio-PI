@@ -43,14 +43,25 @@ create table aquario (
 create table medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
 	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
 	momento DATETIME,
 	fk_aquario INT,
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
+
+insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
+(60.2,22.2,'2025-06-17 13:12:00',1),
+(62.8,22.2,'2025-06-17 13:12:05',1),
+(61.1,22.2,'2025-06-17 13:12:10',1),
+(66.7,22.2,'2025-06-17 13:12:15',1),
+(68.2,22.2,'2025-06-17 13:12:20',1),
+
+(61.1,22.4,'2025-06-17 13:12:00',2),
+(62.4,23.6,'2025-06-17 13:12:05',2),
+(61.3,22.1,'2025-06-17 13:12:10',2),
+(65.2,21.9,'2025-06-17 13:12:15',2),
+(68.7,22.2,'2025-06-17 13:12:20',2);
+
 
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
