@@ -3,7 +3,7 @@ var database = require("../database/config");
 function buscarUltimasMedidas(idAquario, limite_linhas) {
 
     var instrucaoSql = `SELECT 
-        dht11_temperatura as temperatura, 
+        luminosidade, 
         dht11_umidade as umidade,
                         momento,
                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico

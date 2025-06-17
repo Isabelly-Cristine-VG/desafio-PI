@@ -1,7 +1,7 @@
 -- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
+drop database estufaTech;
 CREATE DATABASE estufaTech;
 
 USE estufaTech;
@@ -49,18 +49,19 @@ create table medida (
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
 
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+insert into aquario (descricao, fk_empresa) values ('Estufa A', 1);
+insert into aquario (descricao, fk_empresa) values ('Estufa B', 1);
+insert into aquario (descricao, fk_empresa) values ('Estufa C', 1);
 
 insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
 (60.2,22.2,'2025-06-17 13:12:00',1),
 (62.8,22.2,'2025-06-17 13:12:05',1),
 (61.1,22.2,'2025-06-17 13:12:10',1),
 (66.7,22.2,'2025-06-17 13:12:15',1),
-(68.2,22.2,'2025-06-17 13:12:20',1),
+(68.2,22.2,'2025-06-17 13:12:20',1);
 
+insert into medida(dht11_umidade,luminosidade,momento,fk_aquario)values
 (61.1,22.4,'2025-06-17 13:12:00',2),
 (62.4,23.6,'2025-06-17 13:12:05',2),
 (61.3,22.1,'2025-06-17 13:12:10',2),
